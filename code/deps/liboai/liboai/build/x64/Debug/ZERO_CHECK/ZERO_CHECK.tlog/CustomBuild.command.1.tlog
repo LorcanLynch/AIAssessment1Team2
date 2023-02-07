@@ -1,0 +1,10 @@
+^C:\DEV\PROJECTS\BEAMER_SLIDES\MODULES\AIPFG\LECTURES\CHATBOTS\LAB\CODE\DEPS\LIBOAI\LIBOAI\BUILD\CMAKEFILES\91F40A5061EAFD9A2D8E1836F37C9F7A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai -BC:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build/oai.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

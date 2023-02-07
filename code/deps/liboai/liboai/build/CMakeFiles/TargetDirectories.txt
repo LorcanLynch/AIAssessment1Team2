@@ -1,0 +1,4 @@
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build/CMakeFiles/oai.dir
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build/CMakeFiles/INSTALL.dir
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build/CMakeFiles/ALL_BUILD.dir
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/liboai/build/CMakeFiles/ZERO_CHECK.dir

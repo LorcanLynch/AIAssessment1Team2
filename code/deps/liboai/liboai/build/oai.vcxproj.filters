@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\completions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\edits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\embeddings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\files.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\fine_tunes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\images.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\models.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\components\moderations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\core\authorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\core\response.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\liboai\liboai\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\dev\projects\beamer_slides\modules\aipfg\lectures\chatbots\lab\code\deps\vcpkg-export\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A5DC2EBB-26FA-3FFA-81EF-9FAB92A50897}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/lib/oai.lib
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/liboai.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/completions.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/edits.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/embeddings.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/files.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/fine_tunes.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/images.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/models.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/components/moderations.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/core/authorization.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/core/exception.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/core/network.h
+C:/dev/projects/beamer_slides/modules/aipfg/lectures/chatbots/lab/code/deps/liboai/install/include/core/response.h
