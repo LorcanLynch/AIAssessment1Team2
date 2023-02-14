@@ -7,7 +7,7 @@
 #include <numeric> // std::iota
 #include <iostream>
 
-void update_prompt(std::string& prompt, char c, const int font_size,
+void update_prompt(std::string& prompt, const std::string& str, const int font_size,
                    const float max_text_width, int& tail_index_large,
                    int& tail_index_small, int& nchars_entered);
 
@@ -59,28 +59,34 @@ int main(int argc, char *argv[])
   const float grey_speed = 2.5f;
 
   bool reaper_collision = false; // currently colliding with the reaper?
+  const std::string reaper_nature =
+   "The following is a conversation with the grim reaper. The grim reaper is a "
+   "personified force. In some mythologies, the grim reaper causes the "
+   "victim's death by coming to collect that person's soul.\n\n";
 
   const int font_size = 30; // n.b. "spacing" varies with the font & font size
   //bool display_text_box = true; SetExitKey(0); // debug
   bool display_text_box = false;
   const float border = 20;
+  const float jump_fix = 4;
   const float box_width = (float)window.GetWidth() - (2 * border);
-  const float average_word_size = MeasureText("Abcdef", font_size);
+  const float average_word_size = MeasureText("Abcdefg", font_size);
   const float max_text_width = box_width - average_word_size;
   const float box_ypos = (float)window.GetHeight() - 200;
   const float box_height_small = (float)window.GetHeight() - box_ypos - border;
-  const float box_height_large = (float)window.GetHeight() - (2 * border);
+  const float box_height_large = (float)window.GetHeight() - (2 * border) + jump_fix;
   Rectangle text_box_small{ border, box_ypos, box_width, box_height_small };
-  Rectangle text_box_large{ border, border,   box_width, box_height_large };
+  Rectangle text_box_large{ border, border - jump_fix,   box_width, box_height_large };
   Rectangle* text_box = &text_box_small;
 
   const std::string human_stop = "Human: ";
   const std::string reaper_stop = "Grim Reaper: ";
   const std::string new_lines = "\n\n\n\n\n\n\n\n\n"; // 9
-  std::string prompt = new_lines + reaper_stop +
-                       "Why are you here?\n" + human_stop;
+  std::string reaper_prompt = new_lines + reaper_stop +
+                              "Why are you here?\n" + human_stop;
   int tail_index_large = 0;
-  int tail_index_small = prompt.find(reaper_stop) - 1;
+  int tail_index_small = reaper_prompt.rfind('\n');
+      tail_index_small = reaper_prompt.rfind('\n', tail_index_small - 1);
   int* tail_index = &tail_index_small;
   int nchars_entered = 0;
 
@@ -95,7 +101,7 @@ int main(int argc, char *argv[])
       switch (GetKeyPressed())
       {
         case KEY_ESCAPE:
-          if (text_box == &text_box_large)
+          if (text_box == &text_box_large) // esc resumes the small text box
           {
             text_box = &text_box_small;
             tail_index = &tail_index_small;
@@ -110,24 +116,19 @@ int main(int argc, char *argv[])
 
         case KEY_ENTER:
           {
-          std::cout << "KEY_ENTER PRESSED!\n";
-          const std::string reaper_nature =
-            "The following is a conversation with the grim reaper. The grim "
-            "reaper is a personified force. In some mythologies, the grim "
-            "reaper causes the victim's death by coming to collect that "
-            " person's soul.\n\n";
-
           std::string response_str{};
+          update_prompt(reaper_prompt, '\n' + reaper_stop, font_size, max_text_width,
+                        tail_index_large, tail_index_small, nchars_entered);
           const auto stop = std::optional{std::vector{human_stop, reaper_stop}};
-std::cout << (reaper_nature + prompt + '\n' + reaper_stop) << std::endl;
-          oai_help.submit(reaper_nature + prompt + '\n' + reaper_stop, response_str, stop);
-std::cout << response_str << '\n';
-//response_str = " It is the day of reckoning. Why have you come?";
-          /*for (auto c : response_str)
+          oai_help.submit(reaper_nature + reaper_prompt, response_str, stop);
+          for (auto& c : response_str)
           {
-            update_prompt(prompt, c, font_size, max_text_width,
-                          tail_index_large, tail_index_small, nchars_entered);
-          }*/
+            c = (c=='\n') ? ' ' : c; // replace newlines with spaces
+          }
+          response_str += '\n' + human_stop;
+          update_prompt(reaper_prompt, response_str, font_size, max_text_width,
+                        tail_index_large, tail_index_small, nchars_entered);
+          nchars_entered = 0;
           }
           break;
 
@@ -139,13 +140,13 @@ std::cout << response_str << '\n';
         case KEY_BACKSPACE:
           if (nchars_entered > 0)
           {
-            bool reposition = prompt.back() == '\n'; // last char is newline
-            prompt.pop_back();
+            bool reposition = reaper_prompt.back() == '\n'; // last char is newline
+            reaper_prompt.pop_back();
             nchars_entered--;
             if (reposition)
             {
-              tail_index_large = prompt.rfind('\n', tail_index_large - 2) + 1;
-              tail_index_small = prompt.rfind('\n', tail_index_small - 2) + 1;
+              tail_index_large = reaper_prompt.rfind('\n', tail_index_large - 2) + 1;
+              tail_index_small = reaper_prompt.rfind('\n', tail_index_small - 2) + 1;
             }
           }
           break;
@@ -155,21 +156,8 @@ std::cout << response_str << '\n';
       {
         if ((key >= 32) && (key <= 125)) // e.g. don't grab the ESC key
         {
-          update_prompt(prompt, key, font_size, max_text_width, tail_index_large,
-                        tail_index_small, nchars_entered);
-          /*const char* psz = &prompt[prompt.rfind('\n') + 1];
-          if ((char)key == ' ' && MeasureText(psz, font_size) > max_text_width)
-          {
-            prompt.push_back('\n');
-            tail_index_large = prompt.find('\n', tail_index_large) + 1;
-            tail_index_small = prompt.find('\n', tail_index_small) + 1;
-          }
-          else
-          {
-            prompt.push_back((char)key);
-          }
-
-          nchars_entered++;*/
+          update_prompt(reaper_prompt, std::string{(char)key}, font_size, max_text_width,
+                        tail_index_large, tail_index_small, nchars_entered);
         }
       }
     }
@@ -249,7 +237,7 @@ std::cout << response_str << '\n';
       Color light_gray_transparent{ 80, 80, 80, 192 }; // 192/256 nontransparent
       DrawRectangleRec(*text_box, light_gray_transparent);
       unsigned int milliseconds = (unsigned int)(GetTime() * 1000.0);
-      std::string s = &prompt[*tail_index];
+      std::string s = &reaper_prompt[*tail_index];
       if ((milliseconds % 1000) > 500)
       {
         s.push_back('_');
@@ -263,21 +251,26 @@ std::cout << response_str << '\n';
   return 0;
 }
 
-void update_prompt(std::string& prompt, char c, const int font_size,
+void update_prompt(std::string& prompt, const std::string& str, const int font_size,
                    const float max_text_width, int& tail_index_large,
                    int& tail_index_small, int& nchars_entered)
 {
-  const char* psz = &prompt[prompt.rfind('\n') + 1];
-  if (c == ' ' && MeasureText(psz, font_size) > max_text_width)
+  for (char c : str)
   {
-    prompt.push_back('\n');
-    tail_index_large = prompt.find('\n', tail_index_large) + 1;
-    tail_index_small = prompt.find('\n', tail_index_small) + 1;
-  }
-  else
-  {
-    prompt.push_back(c);
-  }
+    const char* psz = &prompt[prompt.rfind('\n') + 1];
 
-  nchars_entered++;
+    if (c == ' ' && MeasureText(psz, font_size) > max_text_width)
+    {
+      c = '\n';
+    }
+
+    if (c == '\n')
+    {
+      tail_index_large = prompt.find('\n', tail_index_large) + 1;
+      tail_index_small = prompt.find('\n', tail_index_small) + 1;
+    }
+
+    prompt.push_back(c);
+    nchars_entered++;
+  }
 }
