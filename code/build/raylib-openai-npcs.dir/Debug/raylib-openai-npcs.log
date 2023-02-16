@@ -1,0 +1,16 @@
+﻿  raylib-openai-npcs.cpp
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(96,46): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(96,33): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(111,51): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(112,73): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(171,85): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(172,85): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(364,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(364,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(388,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(389,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+oai.lib(authorization.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(authorization.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+oai.lib(completions.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(completions.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+oai.lib(response.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(response.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+     Creating library C:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build/Debug/raylib-openai-npcs.lib and object C:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build/Debug/raylib-openai-npcs.exp
+  raylib-openai-npcs.vcxproj -> C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\raylib-openai-npcs.exe

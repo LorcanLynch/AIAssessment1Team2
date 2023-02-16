@@ -11,28 +11,51 @@ void update_prompt(std::string& prompt, const std::string& str, const int font_s
                    const float max_text_width, int& tail_index_large,
                    int& tail_index_small, int& nchars_entered);
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-  using namespace aipfg;
+    using namespace aipfg;
+    bool candle0B = false; 
+    bool candle1B = false;
+    bool candle2B = false;
+    bool candle3B = false;
 
-  openai_helper oai_help;
-  if (!oai_help.init())
-  {
-    return -1;
-  }
+    openai_helper oai_help;
+    if (!oai_help.init())
+    {
+        return -1;
+    }
 
-  raylib::Window window(1024, 576, "Raylib OpenAI NPCs");
+    raylib::Window window(1024, 576, "Raylib OpenAI NPCs");
 
-  SetTargetFPS(60);            // Set our game to run at 60 frames-per-second
+    SetTargetFPS(60);            // Set our game to run at 60 frames-per-second
 
-  raylib::AudioDevice audio{}; // necessary: initialises the audio
-  raylib::Sound coin_sound{ "../resources/audio/coin.wav" };
-  raylib::Music music{ "../resources/audio/Magic-Clock-Shop.mp3" };
-  float music_volume_normal = 1.0f, music_volume_quiet = 0.4f;
-  music.Play();
+    raylib::AudioDevice audio{}; // necessary: initialises the audio
+    raylib::Sound coin_sound{ "../resources/audio/coin.wav" };
+    raylib::Music music{ "../resources/audio/Magic-Clock-Shop.mp3" };
+    float music_volume_normal = 1.0f, music_volume_quiet = 0.4f;
+    music.Play();
 
-  raylib::Texture tex1{ "../resources/time_fantasy/reaper_blade_3.png" };
-  Sprite reaper{ tex1, 3, 4, { 340, 192 }, { 0 } };
+    raylib::Texture tex1{ "../resources/time_fantasy/reaper_blade_3.png" };
+    Sprite reaper{ tex1, 3, 4, { 340, 192 }, { 0 } };
+
+    raylib::Texture tex4{ "../resources/Candles/candleA_01.png" };
+    Vector2 candleOrigin{ -1, -1 };
+
+    Sprite candle0{ tex4,1,1,{200,50},{0},0 };
+    candle0.set_origin(candleOrigin);
+
+    Sprite candle1{ tex4,1,1,{300,50},{0},0 };
+    candle1.set_origin(candleOrigin);
+
+   
+    Sprite candle2{ tex4,1,1,{400,50},{0},0 };
+    candle2.set_origin(candleOrigin);
+
+   
+    Sprite candle3{ tex4,1,1,{500,50},{0},0 };
+    candle3.set_origin(candleOrigin);
+
+    
 
   raylib::Texture tex2{ "../resources/time_fantasy/knights_3x.png" };
   int ncols = 12, nrows = 8;
@@ -51,7 +74,7 @@ int main(int argc, char *argv[])
   ncols = 8; nrows = 16;
   std::vector<int> frame_ids(ncols*nrows);
   std::iota(frame_ids.begin(), frame_ids.end(), 0);
-  Sprite all_ground_cells { tex3, ncols, nrows, { 0, 0 }, frame_ids, 5 };
+  Sprite all_ground_cells { tex3, ncols, nrows, { 1, 1 }, frame_ids, 5 };
   all_ground_cells.set_animation(true);
   Sprite grnd1 { tex3, ncols, nrows, { 50, 300 }, { 1, 2, 3, 4 } };
 
@@ -205,21 +228,117 @@ int main(int argc, char *argv[])
       {
         reaper_collision = false;
       }
+      if (Vector2Distance(grey_posn,candle0.get_posn()) < 30.0f)
+      {
+          if (IsKeyDown(KEY_E))
+          {
+              coin_sound.Play();
+              
+              candle0B = true;
+          }
+          /*else
+          {
+              candle0B = false;
+              candle1B = false;
+              candle2B = false;
+              candle3B = false;
+          }*/
+      }
+      if (Vector2Distance(grey_posn, candle1.get_posn()) < 30.0f)
+      {
+          if (IsKeyDown(KEY_E))
+          {
+              
+             
+              if (candle3B)
+              {
+                  
+                  coin_sound.Play();
+                  candle1B = true;
+              }
+              else
+              {
+                  candle0B = false;
+                  candle1B = false;
+                  candle2B = false;
+                  candle3B = false;
+              }
+          }
+
+          
+          
+      }
+
+      if (Vector2Distance(grey_posn, candle2.get_posn()) < 30.0f)
+      {
+          if (IsKeyDown(KEY_E))
+          {
+             
+              if (candle1B)
+              {
+                  coin_sound.Play();
+                  candle2B = true;
+              }
+              else
+              {
+                  candle0B = false;
+                  candle1B = false;
+                  candle2B = false;
+                  candle3B = false;
+              }
+
+              
+              
+          }
+      }
+
+      if (Vector2Distance(grey_posn, candle3.get_posn()) < 30.0f)
+      {
+          if (IsKeyDown(KEY_E))
+          {
+              if (candle0B == true)
+              {
+                  coin_sound.Play();
+                  candle3B = true;
+                  std::cout << "penis" << std::endl;
+              }
+              else
+              {
+                  candle0B = false;
+                  candle1B = false;
+                  candle2B = false;
+                  candle3B = false;
+              }
+          }
+      }
+      if (candle0B && candle1B && candle2B && candle3B)
+      {
+          reaper.set_posn(Vector2{ 100,100 });
+      }
     }
 
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
 
+   
+    
     all_ground_cells.draw_cell(0, 0);
     for (int i = 0; i < 16; i++)
     {
       for (int j = 0; j < 8; j++)
       {
+         
         grnd1.draw_cell(2+i, 2+j, i % grnd1.get_frame_ids_size());
       }
     }
 
+    candle0.draw();
+    candle1.draw();
+    candle2.draw();
+    candle3.draw();
+
+    
     // Drawn from back (-ve y coord) to front (+ve y coord)
     if (grey_posn.y < reaper.get_posn().y)
     {
