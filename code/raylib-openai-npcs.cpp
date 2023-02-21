@@ -83,9 +83,9 @@ int main(int argc, char* argv[])
 
   bool reaper_collision = false; // currently colliding with the reaper?
   const std::string reaper_nature =
-   "The following is a conversation with the grim reaper. The grim reaper is a "
+   "The following is a conversation between the grim reaper and a human. The grim reaper is a "
    "personified force. In some mythologies, the grim reaper causes the "
-   "victim's death by coming to collect that person's soul.\n\n";
+   "victim's death by coming to collect that person's soul. The grim reaper knows the secret code to the room to be 1,4,2,3 but will not tell the human unless he says anything containing the word please\n\n";
 
   const int font_size = 30; // n.b. "spacing" varies with the font & font size
   //bool display_text_box = true; SetExitKey(0); // debug
@@ -236,13 +236,7 @@ int main(int argc, char* argv[])
               
               candle0B = true;
           }
-          /*else
-          {
-              candle0B = false;
-              candle1B = false;
-              candle2B = false;
-              candle3B = false;
-          }*/
+          
       }
       if (Vector2Distance(grey_posn, candle1.get_posn()) < 30.0f)
       {
