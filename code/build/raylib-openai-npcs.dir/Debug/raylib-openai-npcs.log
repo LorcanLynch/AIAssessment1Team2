@@ -1,12 +1,30 @@
 ﻿  raylib-openai-npcs.cpp
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(96,46): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(96,33): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(111,51): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(112,73): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(171,85): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(172,85): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(358,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(358,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(382,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(383,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(208,46): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(208,33): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(225,52): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(226,74): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(288,86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(289,86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(340,58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(341,80): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(370,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(371,86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(397,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(398,86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(426,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(427,86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(757,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(757,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(827,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(827,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(878,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(878,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(927,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(927,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(968,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp(969,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+oai.lib(authorization.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(authorization.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+oai.lib(completions.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(completions.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+oai.lib(response.obj) : warning LNK4099: PDB 'oai.pdb' was not found with 'oai.lib(response.obj)' or at 'C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\oai.pdb'; linking object as if no debug info
+     Creating library C:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build/Debug/raylib-openai-npcs.lib and object C:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build/Debug/raylib-openai-npcs.exp
   raylib-openai-npcs.vcxproj -> C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\raylib-openai-npcs.exe

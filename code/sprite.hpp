@@ -8,19 +8,19 @@ namespace aipfg {
 
 struct Sprite
 {
-  Sprite(const raylib::Texture& tex,
-         const int ncols, const int nrows, const Vector2 posn,
-         const std::vector<int> frame_ids = { 0 }, const int sprite_fps = 0)
-    : tex_{ tex },
-      ncols_{ ncols },
-      nrows_{ nrows },
-      posn_{ posn },
-      sprite_fps_{ sprite_fps },
-      sprite_width_{ tex_.width / ncols_ },
-      sprite_height_{ tex_.height / nrows_ },
-      frame_ids_{ frame_ids },
-      frame_rec_{ calc_frame_rect(frame_ids_[0]) },
-      prev_time_{ GetTime() }
+    Sprite(const raylib::Texture& tex,
+        const int ncols, const int nrows, const Vector2 posn,
+        const std::vector<int> frame_ids = { 0 }, const int sprite_fps = 0)
+        : tex_{ tex },
+        ncols_{ ncols },
+        nrows_{ nrows },
+        posn_{ posn },
+        sprite_fps_{ sprite_fps },
+        sprite_width_{ tex_.width / ncols_ },
+        sprite_height_{ tex_.height / nrows_ },
+        frame_ids_{ frame_ids },
+        frame_rec_{ calc_frame_rect(frame_ids_[0]) },
+        prev_time_{ GetTime() }
       { }
 
   void set_posn(const Vector2 posn) { posn_ = posn; }
@@ -34,6 +34,7 @@ struct Sprite
   void set_origin(const Vector2 origin) { origin_ = origin; }
   Vector2 get_origin() { return origin_; }
   auto get_frame_ids_size() { return frame_ids_.size(); }
+  void set_colour(Color colour) { colour_ = colour; };
 
   void draw()
   {
@@ -44,7 +45,7 @@ struct Sprite
     const Rectangle dest{ posn_.x, posn_.y,
                           (float)sprite_width_, (float)sprite_height_ };
     Vector2 origin{ sprite_width_ * origin_.x, sprite_height_ * origin_.y };
-    DrawTexturePro(tex_, frame_rec_, dest, origin, angle_ += delta_, WHITE);
+    DrawTexturePro(tex_, frame_rec_, dest, origin, angle_ += delta_, colour_);
   }
   void draw(const Vector2 posn) { set_posn(posn); draw(); }
   void draw_cell(const int x, const int y)
@@ -54,7 +55,7 @@ struct Sprite
   }
   void draw_cell(const int x, const int y, const int frame_id)
   {
-    calc_frame_rect(frame_ids_[frame_id]);
+   frame_rec_ = calc_frame_rect(frame_ids_[frame_id]);
     draw_cell(x, y);
   }
 
@@ -97,6 +98,8 @@ private:
   int frame_{ 0 }; // zero-based frame index for frame_ids_
   Rectangle frame_rec_;
   bool animation_on_{ false };
+  Color colour_ = WHITE;
+  
 };
 
 } // namespace aipfg
