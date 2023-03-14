@@ -1,4 +1,4 @@
-./build
+code/buildM
 code/build/.vs/aipfg-ass1/v17/ipch/AutoPCH/94a16c292bb8f519/OPENAI-HELPER.ipch
 code/build/.vs/aipfg-ass1/v17/Browse.VC.db
 code/build/.vs/aipfg-ass1/v17/Browse.VC.opendb
@@ -7,3 +7,4 @@ code/.env
 code/.env
 code/.env
 code/build/.vs/aipfg-ass1/v17/ipch/AutoPCH/3a7910c3fe966273/OPENAI-HELPER.ipch
+code/buildM/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate
