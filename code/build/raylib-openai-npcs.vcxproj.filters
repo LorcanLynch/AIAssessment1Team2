@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\raylib-openai-npcs.cpp">
+    <ClCompile Include="C:\Users\Lorcan\Documents\!AiHandin\code\raylib-openai-npcs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\openai-helper.cpp">
+    <ClCompile Include="C:\Users\Lorcan\Documents\!AiHandin\code\openai-helper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\openai-helper.hpp">
+    <ClInclude Include="C:\Users\Lorcan\Documents\!AiHandin\code\openai-helper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\sprite.hpp">
+    <ClInclude Include="C:\Users\Lorcan\Documents\!AiHandin\code\sprite.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Lorcan\Documents\!AiHandin\code\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\deps\vcpkg-export\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
+    <Natvis Include="C:\Users\Lorcan\Documents\!AiHandin\code\deps\vcpkg-export\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{094FC27A-3DFB-31E6-8D2B-D1A683B54859}</UniqueIdentifier>
+      <UniqueIdentifier>{45FE223A-29C5-3CF6-A31C-7C89D8204B57}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{6C74A74D-3DC3-3F9C-A22D-086B9AA33342}</UniqueIdentifier>
+      <UniqueIdentifier>{F02E00BE-436D-3193-B4B6-F1151131D69D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

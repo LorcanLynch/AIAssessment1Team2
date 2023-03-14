@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\Lorcan\Documents\!AiHandin\code\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Lorcan\Documents\UniTesting\AIAssess1\AIAssessment1\code\build\Debug\raylib-openai-npcs.exe</FullPath>
+      <FullPath>C:\Users\Lorcan\Documents\!AiHandin\code\build\Debug\raylib-openai-npcs.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -1,6 +1,6 @@
-^C:\USERS\LORCAN\DOCUMENTS\UNITESTING\AIASSESS1\AIASSESSMENT1\CODE\BUILD\CMAKEFILES\95A777371472F3A26C540C12C64E220C\GENERATE.STAMP.RULE
+^C:\USERS\LORCAN\DOCUMENTS\!AIHANDIN\CODE\BUILD\CMAKEFILES\A1BEB79D46CC8B77AF724A8C37BD63D7\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code -BC:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Lorcan/Documents/UniTesting/AIAssess1/AIAssessment1/code/build/aipfg-ass1.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lorcan/Documents/!AiHandin/code -BC:/Users/Lorcan/Documents/!AiHandin/code/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Lorcan/Documents/!AiHandin/code/build/aipfg-ass1.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
